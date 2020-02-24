@@ -46,6 +46,24 @@ public class TCine {
         return pos;
     }
 
+    public static Easientos BuscarAsientos(int asiento) {
+        for (int i = 0; i < Tasientos.size(); i++) {
+            if (Tasientos.get(i).getAsiento() == asiento) {
+                return Tasientos.get(i);
+            }
+        }
+        return null;
+    }
+
+    public static void modificar(int asiento) {
+        for (int i = 0; i < Tasientos.size(); i++) {
+            if (Tasientos.get(i).getAsiento() == asiento) {
+                Tasientos.get(i).setOcupad(true);
+            }
+        }
+
+    }
+
     public static DefaultTableModel MostrarDatosCliente() {
         String[] T = {"Cédula", "Nombre", "Apellidos", "Telefono", "Edad", "Sexo", "Cantidad Boletos"};
         String[] registro = new String[7];
@@ -77,7 +95,7 @@ public class TCine {
         DefaultTableModel modelo;
         modelo = new DefaultTableModel(null, T);
         for (int i = 0; i < TCinex.size(); i++) {
-            
+
             registr[0] = String.valueOf(getEcine(i).getID());
             registr[1] = Tcliente.get(i).getNombre();
             registr[2] = String.valueOf(Tcliente.get(i).getEdad());
@@ -87,20 +105,18 @@ public class TCine {
             registr[6] = getEsalas(i).getNPeli();
             registr[7] = String.valueOf(getEsalas(i).getSala());
             registr[8] = getEsalas(i).getDia();
-            
+
             modelo.addRow(registr);
 
         }
         return modelo;
     }
-    
-    
-    
-    public static Ecine getEcine(int pos){
+
+    public static Ecine getEcine(int pos) {
         return TCinex.get(pos);
     }
-    
-    public static ESalas getEsalas(int pos){
+
+    public static ESalas getEsalas(int pos) {
         return Tsalas.get(pos);
     }
 }
