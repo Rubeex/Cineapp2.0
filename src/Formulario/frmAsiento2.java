@@ -10,8 +10,11 @@ import Entidades.Easientos;
 import Entidades.Ecine;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+import Controlador.TCine;
 
 /**
  *
@@ -29,6 +32,7 @@ public class frmAsiento2 extends javax.swing.JFrame {
         this.funcion = funcion;
         setSize(700, 400);
         setLocationRelativeTo(this);
+
         Easientos objAsiento = new Easientos(0, false);
         TCine.Ingresar3(objAsiento);
         Easientos objAsiento1 = new Easientos(1, false);
@@ -96,8 +100,442 @@ public class frmAsiento2 extends javax.swing.JFrame {
         Easientos objAsiento32 = new Easientos(32, false);
         TCine.Ingresar3(objAsiento32);
 
-      
+          jRadioButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton1.getText());
+                frmSalas.jTextField4.setText(jRadioButton1.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton1.getText()));
+                if (asiento.isOcupad()) {
+
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton1.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+
+                }
+            }
+        });
+        jRadioButton2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton2.getText());
+                frmSalas.jTextField4.setText(jRadioButton2.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton2.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton2.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+
+                }
+            }
+        });
+        jRadioButton3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton3.getText());
+                frmSalas.jTextField4.setText(jRadioButton3.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton3.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton13.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton4.getText());
+                frmSalas.jTextField4.setText(jRadioButton4.getText());
+
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton4.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton4.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton5.getText());
+                frmSalas.jTextField4.setText(jRadioButton5.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton5.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton5.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton6.getText());
+                frmSalas.jTextField4.setText(jRadioButton6.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton6.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton6.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton8.getText());
+                frmSalas.jTextField4.setText(jRadioButton8.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton8.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton8.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton9.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton9.getText());
+                frmSalas.jTextField4.setText(jRadioButton9.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton9.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton9.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton10.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton10.getText());
+                frmSalas.jTextField4.setText(jRadioButton10.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton10.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton10.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton11.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton11.getText());
+                frmSalas.jTextField4.setText(jRadioButton11.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton11.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton11.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton12.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton12.getText());
+                frmSalas.jTextField4.setText(jRadioButton12.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton12.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton12.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton13.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton13.getText());
+                frmSalas.jTextField4.setText(jRadioButton13.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton13.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton13.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton14.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton14.getText());
+                frmSalas.jTextField4.setText(jRadioButton14.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton14.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton14.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton15.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton15.getText());
+                frmSalas.jTextField4.setText(jRadioButton15.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton15.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton15.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton16.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton16.getText());
+                frmSalas.jTextField4.setText(jRadioButton16.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton16.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton16.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton17.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton17.getText());
+                frmSalas.jTextField4.setText(jRadioButton17.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton17.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton17.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton18.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton18.getText());
+                frmSalas.jTextField4.setText(jRadioButton18.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton18.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton18.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton19.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton19.getText());
+                frmSalas.jTextField4.setText(jRadioButton19.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton19.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton19.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton20.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton20.getText());
+                frmSalas.jTextField4.setText(jRadioButton20.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton20.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton20.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton21.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton21.getText());
+                 frmSalas.jTextField4.setText(jRadioButton21.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton21.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton21.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton22.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton22.getText());
+                 frmSalas.jTextField4.setText(jRadioButton22.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton22.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton22.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton23.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton23.getText());
+                 frmSalas.jTextField4.setText(jRadioButton23.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton23.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton23.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton24.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton24.getText());
+                 frmSalas.jTextField4.setText(jRadioButton24.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton24.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton24.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton25.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton25.getText());
+                 frmSalas.jTextField4.setText(jRadioButton25.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton25.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton25.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton26.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton26.getText());
+                 frmSalas.jTextField4.setText(jRadioButton26.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton26.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton26.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton27.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton27.getText());
+                 frmSalas.jTextField4.setText(jRadioButton27.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton27.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton27.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton28.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton28.getText());
+                 frmSalas.jTextField4.setText(jRadioButton28.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton28.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton28.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton29.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton29.getText());
+                 frmSalas.jTextField4.setText(jRadioButton29.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton29.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton29.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton30.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton30.getText());
+                 frmSalas.jTextField4.setText(jRadioButton30.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton30.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton30.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton31.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton31.getText());
+                 frmSalas.jTextField4.setText(jRadioButton31.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton31.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton31.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton32.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton32.getText());
+                 frmSalas.jTextField4.setText(jRadioButton32.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton32.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton32.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton32.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton32.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton32.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton32.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+        jRadioButton33.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Integer.parseInt(jRadioButton33.getText());
+                 frmSalas.jTextField4.setText(jRadioButton33.getText());
+                Easientos asiento = TCine.BuscarAsientos(Integer.parseInt(jRadioButton33.getText()));
+                if (asiento.isOcupad()) {
+                    JOptionPane.showMessageDialog(null, "Asiento Ocupado!! Por favor Eliga otro!!");
+                } else {
+                    TCine.modificar(Integer.parseInt(jRadioButton33.getText()));
+                    frmSalas.jTextField5.setText("Libre");
+                }
+            }
+        });
+
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -450,18 +888,8 @@ public class frmAsiento2 extends javax.swing.JFrame {
 
         if (funcion.equals("Asignar Pueso")) {
             
-           jRadioButton1.addActionListener(new ActionListener() {
-            public void actionPerformed (ActionEvent e) {
-                Integer.parseInt(jRadioButton1.getText());
-                Easientos asiento = TCine.BuscarAsiento(Integer.parseInt(jRadioButton1.getText()));
-                if (asiento.isOcupad()) {
-                    JOptionPane.showMessageDialog(null, "BUSQUE OTRO ASIENTO QUE ESTE LIBRE!");
-                } else {
-                    TCine.ModificarAsiento(Integer.parseInt(jRadioButton1.getText()));
-
-                }
-            }
-        });
+            
+            
 
         }
 

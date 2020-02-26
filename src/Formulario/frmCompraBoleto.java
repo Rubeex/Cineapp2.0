@@ -22,7 +22,7 @@ public class frmCompraBoleto extends javax.swing.JFrame {
      */
     public frmCompraBoleto() {
         initComponents();
-        setSize(600,400);
+        setSize(900,400);
         setLocationRelativeTo(this);
         MostrarBoleta();
      
@@ -77,7 +77,7 @@ public class frmCompraBoleto extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 520, 100));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 850, 100));
 
         jButton1.setBackground(new java.awt.Color(0, 204, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -107,7 +107,7 @@ public class frmCompraBoleto extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 70, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 70, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

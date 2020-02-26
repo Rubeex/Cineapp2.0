@@ -195,6 +195,12 @@ public class frmIngresoBoleto extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("Total a Pagar");
         jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, -1, -1));
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 90, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 460, 160));
@@ -291,7 +297,7 @@ public class frmIngresoBoleto extends javax.swing.JFrame {
             int Edad = Integer.parseInt(frmIngresoCliente.jTextField5.getText());
             String Tipo = jComboBox2.getSelectedItem().toString();
             String Localidad = jComboBox3.getSelectedItem().toString();
-            double Total = 0;
+            double Total = Double.parseDouble(jTextField6.getText());
             String Npeli = frmSalas.jTextField2.getText();
             int Sala = Integer.parseInt(frmSalas.jComboBox1.getSelectedItem().toString());
             String Dia = frmSalas.jTextField1.getText();
@@ -314,6 +320,10 @@ public class frmIngresoBoleto extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -357,8 +367,8 @@ public class frmIngresoBoleto extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
+    public static javax.swing.JComboBox jComboBox2;
+    public static javax.swing.JComboBox jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -378,7 +388,7 @@ public class frmIngresoBoleto extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    public static javax.swing.JTextField jTextField6;
     public static javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

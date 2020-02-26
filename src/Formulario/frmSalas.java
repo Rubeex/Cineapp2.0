@@ -7,6 +7,7 @@ package Formulario;
 
 import Controlador.TCine;
 import Entidades.ESalas;
+import Entidades.Easientos;
 import javax.swing.JRadioButton;
 
 /**
@@ -62,6 +63,9 @@ public class frmSalas extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -117,7 +121,7 @@ public class frmSalas extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 210, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, -1, -1));
 
         jButton4.setText("Cancelar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -125,12 +129,18 @@ public class frmSalas extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setText("Costo");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 100, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setText("Asiento");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 200, -1, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 100, -1));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 100, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,9 +165,13 @@ public class frmSalas extends javax.swing.JFrame {
                 String NPeli = jTextField2.getText();
                 int Sala = jComboBox1.getSelectedItem().toString().charAt(0);
                 String Dia = jTextField1.getText();
-                
+                int Asiento = Integer.parseInt(jTextField4.getText());
+
+                Easientos oy = new Easientos(Asiento, rootPaneCheckingEnabled);
 
                 ESalas oz = new ESalas(NPeli, Sala, Dia);
+                
+                
 
             }
 
@@ -167,16 +181,16 @@ public class frmSalas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      
-        if(jComboBox1.getSelectedIndex()==1){
+
+        if (jComboBox1.getSelectedIndex() == 1) {
             frmAsientos f = new frmAsientos("Asignar Asiento");
             f.setVisible(true);
-        }else{
+        } else {
             frmAsiento2 x = new frmAsiento2("Asignar Asiento");
             x.setVisible(true);
         }
-        
-        
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -231,8 +245,11 @@ public class frmSalas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     public static javax.swing.JTextField jTextField1;
     public static javax.swing.JTextField jTextField2;
     public static javax.swing.JTextField jTextField3;
+    public static javax.swing.JTextField jTextField4;
+    public static javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }

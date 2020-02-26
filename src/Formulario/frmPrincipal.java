@@ -5,21 +5,26 @@
  */
 package Formulario;
 
+import Controlador.TCine;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class frmPrincipal extends javax.swing.JFrame {
-    
-    
 
     /**
      * Creates new form frmPrincipal
      */
-    public frmPrincipal() {
+    public frmPrincipal()  {
         initComponents();
-        setSize(600,350);
+        setSize(600, 350);
         setLocationRelativeTo(this);
+
     }
 
     /**
@@ -68,6 +73,11 @@ public class frmPrincipal extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(204, 255, 255));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton3.setText("Facturación");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 140, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cine-02.jpg"))); // NOI18N
@@ -78,15 +88,21 @@ public class frmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      frmRegistroClientes fi = new frmRegistroClientes();
-      fi.setVisible(true);
-      
+        frmRegistroClientes fi = new frmRegistroClientes();
+        fi.setVisible(true);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      frmCompraBoleto c= new frmCompraBoleto();
-     c.setVisible(true);
+        c.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        frmFacturacion j = new frmFacturacion();
+        j.setVisible(true);
+       
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +134,8 @@ public class frmPrincipal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmPrincipal().setVisible(true);
-            }
+                    new frmPrincipal().setVisible(true);
+                }
         });
     }
 

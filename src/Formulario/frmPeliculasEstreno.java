@@ -146,121 +146,301 @@ public class frmPeliculasEstreno extends javax.swing.JFrame {
         if (funcion.equals("Asignar Peliculas a ver")) {
 
             if (Integer.parseInt(frmIngresoCliente.jTextField5.getText()) >= 5 && Integer.parseInt(frmIngresoCliente.jTextField5.getText()) < 15) {
-
-                if (jRadioButton1.isSelected()) {
-                    frmSalas.jTextField2.setText(jRadioButton1.getText());
-                    frmSalas.jTextField1.setText("01/02/2020");
-                    frmSalas.jTextField3.setText("5.50");
-                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                } else {
-                    if (jRadioButton2.isSelected()) {
-                        frmSalas.jTextField2.setText(jRadioButton2.getText());
-                        frmSalas.jTextField1.setText("19/01/2020");
-                        frmSalas.jTextField3.setText("7.00");
-                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
-                    }
-                }
-
-            } else {
-
-                if (Integer.parseInt(frmIngresoCliente.jTextField5.getText()) >= 15 && Integer.parseInt(frmIngresoCliente.jTextField5.getText()) < 18) {
-
-                    if (jRadioButton1.isSelected()) {
-                        frmSalas.jTextField2.setText(jRadioButton1.getText());
-                        frmSalas.jTextField1.setText("01/02/2020");
-                        frmSalas.jTextField3.setText("5.50");
-                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                    } else {
-                        if (jRadioButton2.isSelected()) {
-                            frmSalas.jTextField2.setText(jRadioButton2.getText());
-                            frmSalas.jTextField1.setText("19/01/2020");
-                            frmSalas.jTextField3.setText("7.00");
-                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                        } else {
-                            if (jRadioButton3.isSelected()) {
-                                frmSalas.jTextField2.setText(jRadioButton3.getText());
-                                frmSalas.jTextField1.setText("07/02/2020");
-                                frmSalas.jTextField3.setText("6.50");
-                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                            } else {
-                                if (jRadioButton4.isSelected()) {
-                                    frmSalas.jTextField2.setText(jRadioButton4.getText());
-                                    frmSalas.jTextField1.setText("30/01/2020");
-                                    frmSalas.jTextField3.setText("6.00");
-                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
-
-                                } else {
-                                    JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
-                                }
-                            }
-                        }
-                    }
-
-                } else {
-                    if (Integer.parseInt(frmIngresoCliente.jTextField5.getText()) >= 18) {
+                if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Infantil")) {
+                    if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
 
                         if (jRadioButton1.isSelected()) {
                             frmSalas.jTextField2.setText(jRadioButton1.getText());
                             frmSalas.jTextField1.setText("01/02/2020");
                             frmSalas.jTextField3.setText("5.50");
-                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
 
                         } else {
                             if (jRadioButton2.isSelected()) {
                                 frmSalas.jTextField2.setText(jRadioButton2.getText());
                                 frmSalas.jTextField1.setText("19/01/2020");
                                 frmSalas.jTextField3.setText("7.00");
+                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
+                            }
+                        }
+
+                    } else {
+
+                        if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+
+                            if (jRadioButton1.isSelected()) {
+                                frmSalas.jTextField2.setText(jRadioButton1.getText());
+                                frmSalas.jTextField1.setText("01/02/2020");
+                                frmSalas.jTextField3.setText("5.50");
                                 frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
 
                             } else {
+                                if (jRadioButton2.isSelected()) {
+                                    frmSalas.jTextField2.setText(jRadioButton2.getText());
+                                    frmSalas.jTextField1.setText("19/01/2020");
+                                    frmSalas.jTextField3.setText("7.00");
+                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
+                                }
+                            }
+
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Ingresa correctamen el tipo");
+                        }
+
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Categoria no apta para tú edad");
+
+                }
+            } else {
+                if (Integer.parseInt(frmIngresoCliente.jTextField5.getText()) >= 15 && Integer.parseInt(frmIngresoCliente.jTextField5.getText()) < 18) {
+
+                    if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Infantil")) {
+                        if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
+
+                            if (jRadioButton1.isSelected()) {
+                                frmSalas.jTextField2.setText(jRadioButton1.getText());
+                                frmSalas.jTextField1.setText("01/02/2020");
+                                frmSalas.jTextField3.setText("5.50");
+
+                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                            } else {
+                                if (jRadioButton2.isSelected()) {
+                                    frmSalas.jTextField2.setText(jRadioButton2.getText());
+                                    frmSalas.jTextField1.setText("19/01/2020");
+                                    frmSalas.jTextField3.setText("7.00");
+                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                } 
+                            }
+
+                        } else {
+
+                            if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+
+                                if (jRadioButton1.isSelected()) {
+                                    frmSalas.jTextField2.setText(jRadioButton1.getText());
+                                    frmSalas.jTextField1.setText("01/02/2020");
+                                    frmSalas.jTextField3.setText("5.50");
+                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                } else {
+                                    if (jRadioButton2.isSelected()) {
+                                        frmSalas.jTextField2.setText(jRadioButton2.getText());
+                                        frmSalas.jTextField1.setText("19/01/2020");
+                                        frmSalas.jTextField3.setText("7.00");
+                                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                    } 
+                                }
+
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Ingresa correctamen el tipo");
+                            }
+
+                        }
+                    } else {
+
+                        if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Comedia")) {
+                            if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
                                 if (jRadioButton3.isSelected()) {
                                     frmSalas.jTextField2.setText(jRadioButton3.getText());
                                     frmSalas.jTextField1.setText("07/02/2020");
                                     frmSalas.jTextField3.setText("6.50");
-                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
 
                                 } else {
                                     if (jRadioButton4.isSelected()) {
                                         frmSalas.jTextField2.setText(jRadioButton4.getText());
                                         frmSalas.jTextField1.setText("30/01/2020");
                                         frmSalas.jTextField3.setText("6.00");
+                                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                    } else {
+                                        JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
+                                    }
+                                }
+
+                            } else {
+                                if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+                                    if (jRadioButton3.isSelected()) {
+                                        frmSalas.jTextField2.setText(jRadioButton3.getText());
+                                        frmSalas.jTextField1.setText("07/02/2020");
+                                        frmSalas.jTextField3.setText("6.50");
                                         frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
 
                                     } else {
+                                        if (jRadioButton4.isSelected()) {
+                                            frmSalas.jTextField2.setText(jRadioButton4.getText());
+                                            frmSalas.jTextField1.setText("30/01/2020");
+                                            frmSalas.jTextField3.setText("6.00");
+                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                        } else {
+                                            JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        } else {
+                            JOptionPane.showMessageDialog(null, "La categoria no corresponde a lo seleccionado anteriormente");
+
+                        }
+
+                    }
+
+                } else {
+                    if (Integer.parseInt(frmIngresoCliente.jTextField5.getText()) >= 18) {
+                        if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Infantil")) {
+                            if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
+
+                                if (jRadioButton1.isSelected()) {
+                                    frmSalas.jTextField2.setText(jRadioButton1.getText());
+                                    frmSalas.jTextField1.setText("01/02/2020");
+                                    frmSalas.jTextField3.setText("5.50");
+
+                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                } else {
+                                    if (jRadioButton2.isSelected()) {
+                                        frmSalas.jTextField2.setText(jRadioButton2.getText());
+                                        frmSalas.jTextField1.setText("19/01/2020");
+                                        frmSalas.jTextField3.setText("7.00");
+                                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                    } 
+                                }
+
+                            } else {
+
+                                if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+
+                                    if (jRadioButton1.isSelected()) {
+                                        frmSalas.jTextField2.setText(jRadioButton1.getText());
+                                        frmSalas.jTextField1.setText("01/02/2020");
+                                        frmSalas.jTextField3.setText("5.50");
+                                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                    } else {
+                                        if (jRadioButton2.isSelected()) {
+                                            frmSalas.jTextField2.setText(jRadioButton2.getText());
+                                            frmSalas.jTextField1.setText("19/01/2020");
+                                            frmSalas.jTextField3.setText("7.00");
+                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                        } 
+                                    }
+
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Ingresa correctamen el tipo");
+                                }
+
+                            }
+                        } else {
+
+                            if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Comedia")) {
+                                if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
+                                    if (jRadioButton3.isSelected()) {
+                                        frmSalas.jTextField2.setText(jRadioButton3.getText());
+                                        frmSalas.jTextField1.setText("07/02/2020");
+                                        frmSalas.jTextField3.setText("6.50");
+                                        frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                    } else {
+                                        if (jRadioButton4.isSelected()) {
+                                            frmSalas.jTextField2.setText(jRadioButton4.getText());
+                                            frmSalas.jTextField1.setText("30/01/2020");
+                                            frmSalas.jTextField3.setText("6.00");
+                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
+
+                                        } 
+                                    }
+
+                                } else {
+                                    if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+                                        if (jRadioButton3.isSelected()) {
+                                            frmSalas.jTextField2.setText(jRadioButton3.getText());
+                                            frmSalas.jTextField1.setText("07/02/2020");
+                                            frmSalas.jTextField3.setText("6.50");
+                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                        } else {
+                                            if (jRadioButton4.isSelected()) {
+                                                frmSalas.jTextField2.setText(jRadioButton4.getText());
+                                                frmSalas.jTextField1.setText("30/01/2020");
+                                                frmSalas.jTextField3.setText("6.00");
+                                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                            } 
+                                        }
+                                    }
+
+                                }
+
+                            } else {
+                                if (frmIngresoBoleto.jComboBox2.getSelectedItem().equals("Horror")) {
+                                    if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Vip")) {
                                         if (jRadioButton5.isSelected()) {
                                             frmSalas.jTextField2.setText(jRadioButton5.getText());
                                             frmSalas.jTextField1.setText("23/01/2020");
                                             frmSalas.jTextField3.setText("10.00");
-                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+                                            frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
 
                                         } else {
                                             if (jRadioButton6.isSelected()) {
                                                 frmSalas.jTextField2.setText(jRadioButton6.getText());
                                                 frmSalas.jTextField1.setText("30/01/2020");
                                                 frmSalas.jTextField3.setText("9.50");
-                                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+                                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText()) + 4.00));
 
                                             }
                                         }
-                                    }
-                                }
-                            }
-                        }
+                                    } else {
+                                        if (frmIngresoBoleto.jComboBox3.getSelectedItem().toString().equals("Normal")) {
+                                            if (jRadioButton5.isSelected()) {
+                                                frmSalas.jTextField2.setText(jRadioButton5.getText());
+                                                frmSalas.jTextField1.setText("23/01/2020");
+                                                frmSalas.jTextField3.setText("10.00");
+                                                frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
 
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Categoria no valida para tú Edad");
+                                            } else {
+                                                if (jRadioButton6.isSelected()) {
+                                                    frmSalas.jTextField2.setText(jRadioButton6.getText());
+                                                    frmSalas.jTextField1.setText("30/01/2020");
+                                                    frmSalas.jTextField3.setText("9.50");
+                                                    frmIngresoBoleto.jTextField7.setText(String.valueOf(Double.parseDouble(jTextField3.getText()) * Integer.parseInt(frmIngresoCliente.jTextField6.getText())));
+
+                                                }
+                                            }
+                                        }
+
+                                    }
+
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "La categoria no corresponde a lo seleccionado anteriormente");
+                                }
+
+                            }
+
+                        }
                     }
+
                 }
+
             }
 
         }
+
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
